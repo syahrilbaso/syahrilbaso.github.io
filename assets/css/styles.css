@@ -46,7 +46,7 @@ html {
 
 body {
   margin: var(--header-height) 0 0 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Typo Upright BT', Times, serif;
   font-size: var(--normal-font-size);
   color: var(--second-color);
 }
