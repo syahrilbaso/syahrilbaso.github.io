@@ -48,7 +48,7 @@ body {
   margin: var(--header-height) 0 0 0;
   font-family: 'Typo Upright BT', Times, serif;
   font-size: var(--normal-font-size);
-  color: var(--second-color);
+  background-color: aquamarine;
 }
 
 h1, h2, p {
@@ -112,7 +112,7 @@ img {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: #fff;
+  background-color: aquamarine;
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
 }
 
