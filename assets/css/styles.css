@@ -133,7 +133,7 @@ img {
     width: 80%;
     height: 100%;
     padding: 2rem;
-    background-color: #0bec;
+    background-color: var(--second-color);
     transition: .5s;
   }
 }
