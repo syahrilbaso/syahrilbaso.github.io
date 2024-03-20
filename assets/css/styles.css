@@ -47,7 +47,7 @@ html {
 body {
   margin: var(--header-height) 0 0 0;
   font-family: 'Typo Upright BT', Times, serif;
-  font-size: 86%;
+  font-size: var(--normal-font-size);
   background-color: aquamarine;
 }
 
