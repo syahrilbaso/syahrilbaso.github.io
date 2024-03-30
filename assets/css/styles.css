@@ -866,7 +866,7 @@ a.read_more:hover {
 
 @media only screen and (max-width: 425px) {
   .container {
-      max-width: 90%;
+      max-width: 910%;
   }
 
   .card {
