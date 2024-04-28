@@ -71,6 +71,37 @@ img {
   display: block;
 }
 
+/* Scroll top */
+.scrolltop{
+  position: fixed;
+  right: 1rem;
+  bottom: -20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .3rem;
+  background: rgba(4, 131, 182, 0.5);
+  border-radius: .4rem;
+  z-index: var(--z-tooltip);
+  transition: .4s;
+  visibility: hidden;
+}
+
+.scrolltop:hover{
+  background-color: var(--first-color-alt);
+}
+
+.scrolltop__icon{
+  font-size: 1.8rem;
+  color: var(--body-color);
+}
+
+/* Show scrolltop */
+.show-scroll{
+  visibility: visible;
+  bottom: 1.5rem;
+}
+
 /*===== CLASS CSS ===== */
 .section-title {
   position: relative;
@@ -125,16 +156,19 @@ img {
   font-weight: var(--font-semi);
 }
 
-@media screen and (max-width: 767px) {
-  .nav__menu {
+@media screen and (max-width: 768px){
+  .nav__menu{
     position: fixed;
-    top: var(--header-height);
-    right: -100%;
-    width: 80%;
-    height: 100%;
-    padding: 2rem;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 0 1rem;
+    text-align: center;
     background-color: black;
-    transition: .5s;
+    transition: .4s;
+    box-shadow: 0 4px 4px rgba(0,0,0,.1);
+    border-radius: 0 0 1rem 1rem;
+    z-index: var(--z-fixed);
   }
 }
 
@@ -166,7 +200,7 @@ img {
 }
 
 .nav__toggle {
-  color: black;
+  color: var(--second-color);
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -183,8 +217,8 @@ img {
 }
 
 /*=== Show menu ===*/
-.show {
-  right: 0;
+.show-menu {
+  top: var(--header-height);
 }
 
 /*===== HOME =====*/
@@ -781,7 +815,7 @@ a.read_more {
   font-size: 13px;
   text-decoration: none;
   letter-spacing: 1.1px;
-  background: #2d8de6;
+  background: #0280f7;
   margin-top: 50px;
   padding: 24px 0px;
   border-radius: 15px;
@@ -792,7 +826,7 @@ a.read_more {
 
 a.read_more:hover {
   box-shadow: 0px 1px 50px rgba(0, 0, 0, 0.15);
-  background: rgb(246, 249, 245);
+  background: #404040;
 }
 
 .link {
