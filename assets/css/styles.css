@@ -165,7 +165,7 @@ img {
     padding: 1.5rem 0 1rem;
     text-align: center;
     background-color: #1D2521;
-    transition: .9s;
+    transition: .8s;
     box-shadow: 0 4px 4px rgba(0,0,0,.1);
     border-radius: 0 0 1rem 1rem;
     z-index: var(--z-fixed);
