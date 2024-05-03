@@ -48,33 +48,7 @@ body {
   margin: var(--header-height) 0 0 0;
   font-family: 'Typo Upright BT', Times, serif;
   font-size: 85%;
-  background-color: rgb(11, 214, 250);
-}
-/*========== Variables Dark theme ==========*/
-body.dark-theme{
-  --title-color: #F1F3F2;
-  --text-color: #C7D1CC;
-  --body-color: #1D2521;
-  --container-color: #27302C;
-}
-
-/*========== Button Dark/Light ==========*/
-.change-theme{
-  position: absolute;
-  right: 24rem;
-  top: 1.8rem;
-  color: rgb(0, 162, 255);
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-body{
-  margin: var(--header-height) 0 0 0;
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-  background-color: var(--body-color);
-  color: var(--text-color);
-  line-height: 1.6;
+  background-color: aquamarine;
 }
 
 h1, h2, p {
@@ -110,7 +84,7 @@ img {
   border-radius: .4rem;
   z-index: var(--z-tooltip);
   transition: .4s;
-  /* visibility: hidden; */
+  visibility: hidden;
 }
 
 .scrolltop:hover{
@@ -607,7 +581,7 @@ img {
 .card {
   overflow: hidden;
   padding: 40px;
-  /* background-color: aquamarine; */
+  background-color: aquamarine;
   border-radius: 30px;
   text-align: center;
 }
@@ -788,7 +762,7 @@ a.read_more:hover {
 .card {
   overflow: hidden;
   padding: 20px;
-  /* background-color: aquamarine; */
+  background-color: aquamarine;
   border-radius: 30px;
   text-align: center;
 }
