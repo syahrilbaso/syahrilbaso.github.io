@@ -261,11 +261,13 @@
                 <h2 class="section-title">𝕶𝖔𝖓𝖙𝖆𝖐 𝖈𝖔𝖒𝖎𝖓𝖌 𝖘𝖔𝖔𝖓</h2>
 
                 <div class="contact__container bd-grid">
-                    <form action="" class="contact__form">
-                        <input type="text" placeholder="𝔑𝔞𝔪𝔞" class="contact__input">
-                        <input type="mail" placeholder="𝔈𝔪𝔞𝔦𝔩" class="contact__input">
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="button" value="𝕶𝖎𝖗𝖎𝖒" class="contact__button button">
+                    
+                    <form name="submit-to-google-sheet" action="" class="contact__form">
+                        <input type="text" placeholder="𝔑𝔞𝔪𝔞" name="nama" class="contact__input">
+                        <input type="email" placeholder="𝔈𝔪𝔞𝔦𝔩" name="email" class="contact__input">
+                        <textarea name="pesan" id="" cols="0" rows="10" class="contact__input"></textarea>
+                        <input type="submit" onclick="alert('Terimakasih! Pesan anda sudah kami terima')" value="𝕶𝖎𝖗𝖎𝖒" class="contact__button button">
+                        
                     </form>
                 </div>
             </section>
@@ -294,5 +296,17 @@
 
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
+
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzNc0ITpJgYp_HA6yzgLVWobZ4qFGwVVhEIBN5yaIRwAd8kEotXxbeSieQEARjkGC-6/exec'
+            const form = document.forms['submit-to-google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
     </body>
 </html>
