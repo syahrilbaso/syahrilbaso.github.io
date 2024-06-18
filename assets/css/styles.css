@@ -406,6 +406,7 @@ img {
 
 .contact__button {
   display: block;
+  background-color: #0280f7;
   border: none;
   outline: none;
   font-size: var(--normal-font-size);
