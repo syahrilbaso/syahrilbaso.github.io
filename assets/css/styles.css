@@ -80,7 +80,7 @@ img {
   justify-content: center;
   align-items: center;
   padding: .3rem;
-  background: rgb(10, 248, 109);
+  background: rgb(16, 243, 243);
   border-radius: .4rem;
   z-index: var(--z-tooltip);
   transition: .4s;
@@ -88,7 +88,7 @@ img {
 }
 
 .scrolltop:hover{
-  background-color: black;
+  background-color: rgb(10, 248, 109);
 }
 
 .scrolltop__icon{
