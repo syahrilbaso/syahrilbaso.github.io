@@ -62,3 +62,10 @@ sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{});
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img, .nav__toggle, .nav__menu',{delay: 400}); 
 sr.reveal('.home__social-icon',{ interval: 200}); 
 sr.reveal('.skills__data, .work__img, .contact__input, .container',{interval: 200}); 
+
+// Untuk loading screen//
+$(document).ready(function(){
+    setTimeout(() => {
+    $('.loader').css("display", "none");
+    }, 1000);
+})
