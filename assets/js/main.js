@@ -53,7 +53,7 @@ window.addEventListener('scroll', scrollTop)
 const sr = ScrollReveal({
     origin: 'top',
     distance: '60px',
-    duration: 2000,
+    duration: 3000,
     delay: 2000,
 //     reset: true
 });
