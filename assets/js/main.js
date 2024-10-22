@@ -53,19 +53,19 @@ window.addEventListener('scroll', scrollTop)
 const sr = ScrollReveal({
     origin: 'top',
     distance: '60px',
-    duration: 3000,
-    delay: 2000,
+    duration: 2000,
+    delay: 1000,
 //     reset: true
 });
 
 sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{}); 
-sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img, .nav__toggle, .nav__menu',{delay: 2000}); 
-sr.reveal('.home__social-icon',{ interval: 2000}); 
-sr.reveal('.skills__data, .work__img, .contact__input, .container',{interval: 2000}); 
+sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img, .nav__toggle, .nav__menu',{delay: 1000}); 
+sr.reveal('.home__social-icon',{ interval: 1000}); 
+sr.reveal('.skills__data, .work__img, .contact__input, .container',{interval: 1000}); 
 
 // Untuk loading screen//
 $(document).ready(function(){
     setTimeout(() => {
     $('.loader').css("display", "none");
-    }, 2000);
+    }, 1000);
 })
