@@ -61,7 +61,7 @@ const sr = ScrollReveal({
 sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{}); 
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img, .nav__toggle, .nav__menu',{delay: 1000}); 
 sr.reveal('.home__social-icon',{ interval: 1000}); 
-sr.reveal('.skills__data, .work__img, .contact__input, .container',{interval: 1000}); 
+sr.reveal('.skills__data, .work__img, .contact__input, .container, .card_body, .card_img, .card_title',{interval: 1000}); 
 
 // Untuk loading screen//
 $(document).ready(function(){
