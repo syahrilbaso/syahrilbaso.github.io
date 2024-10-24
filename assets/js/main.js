@@ -67,5 +67,5 @@ sr.reveal('.skills__data, .work__img, .contact__input, .container, .card_body, .
 $(document).ready(function(){
     setTimeout(() => {
     $('.loader').css("display", "none");
-    }, 1000);
+    }, 2099);
 })
