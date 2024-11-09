@@ -63,6 +63,16 @@ sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img, .nav__toggl
 sr.reveal('.home__social-icon',{ interval: 1000}); 
 sr.reveal('.skills__data, .work__img, .contact__input, .container, .card_body, .card_img, .card_title',{interval: 1000}); 
 
+
+showTime();
+
+// Untuk loading screen//
+$(document).ready(function(){
+    setTimeout(() => {
+    $('.loader').css("display", "none");
+    }, 2099);
+})
+
 // Javascipt Zona Waktu
 
 function showTime(){
@@ -94,9 +104,3 @@ function showTime(){
 
 showTime();
 
-// Untuk loading screen//
-$(document).ready(function(){
-    setTimeout(() => {
-    $('.loader').css("display", "none");
-    }, 2099);
-})
