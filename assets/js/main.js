@@ -59,9 +59,9 @@ const sr = ScrollReveal({
 });
 
 sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{}); 
-sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img, .nav__toggle, .nav__menu',{delay: 400}); 
+sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img, .nav__toggle, .nav__menu, .contact__button',{delay: 400}); 
 sr.reveal('.home__social-icon',{ interval: 400}); 
-sr.reveal('.skills__data, .work__img, .contact__input, .container, .card_body, .card_img, .card_title',{interval: 400}); 
+sr.reveal('.skills__data, .work__img, .contact__input, .container, .card_body, .card_img, .card_title, .contact__button',{interval: 400}); 
 
 
 showTime();
