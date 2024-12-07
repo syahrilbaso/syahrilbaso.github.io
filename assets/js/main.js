@@ -53,15 +53,15 @@ window.addEventListener('scroll', scrollTop)
 const sr = ScrollReveal({
     origin: 'top',
     distance: '60px',
-    duration: 200,
+    duration: 400,
     delay: 1000,
 //     reset: true
 });
 
 sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{}); 
-sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img, .nav__toggle, .nav__menu',{delay: 300}); 
-sr.reveal('.home__social-icon',{ interval: 300}); 
-sr.reveal('.skills__data, .work__img, .contact__input, .container, .card_body, .card_img, .card_title',{interval: 300}); 
+sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img, .nav__toggle, .nav__menu',{delay: 400}); 
+sr.reveal('.home__social-icon',{ interval: 400}); 
+sr.reveal('.skills__data, .work__img, .contact__input, .container, .card_body, .card_img, .card_title',{interval: 400}); 
 
 
 showTime();
