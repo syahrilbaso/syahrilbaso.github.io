@@ -79,9 +79,9 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: .3rem;
+  padding: .1rem;
   background: #F8F8FF;
-  border-radius: .1rem;
+  border-radius: .4rem;
   z-index: var(--z-tooltip);
   transition: .4s;
   visibility: hidden;
