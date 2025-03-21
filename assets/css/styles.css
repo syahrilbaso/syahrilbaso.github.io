@@ -80,7 +80,7 @@ img {
   justify-content: center;
   align-items: center;
   padding: .3rem;
-  background: rgb(16, 243, 243);
+  background: #7FFF00;
   border-radius: .4rem;
   z-index: var(--z-tooltip);
   transition: .4s;
