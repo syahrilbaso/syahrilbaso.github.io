@@ -104,3 +104,11 @@ function showTime(){
 
 showTime();
 
+ // alert durasi
+
+setTimeout(() => {
+  alert("ASSALAMUALAIKUM TEMAN-TEMAN ONLINE | SELAMAT DATANG DI WEBSITE KELAS KAMI | WEBSITE KELAS IPA 4 2K16 | (UPATADE TERBARU: DITAMBAHKAN FOTO BARU MEGA, RIAN (KETUA KELAS), DAN PAK TAMBRIN (WALI KELAS)");
+}, 4000); // durasi dalam milidetik (3000 = 3 detik)
+
+
+
