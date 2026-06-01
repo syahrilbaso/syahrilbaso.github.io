@@ -52,27 +52,19 @@ themeToggle.addEventListener('click', () => {
 // ========= LANGUAGE MANAGEMENT =========
 function applyLanguage() {
     const t = translations[currentLang];
-    
-    // Update semua teks yang memiliki ID
     document.getElementById('loaderText').innerText = t.loaderText;
     document.getElementById('heroTagline').innerText = t.heroTagline;
     document.getElementById('aboutTitle').innerText = t.aboutTitle;
     document.getElementById('skillsTitle').innerText = t.skillsTitle;
     document.getElementById('contactTitle').innerText = t.contactTitle;
-    document.querySelector('#whatsappBtn span').innerText = t.whatsappText;
+    const whatsappSpan = document.querySelector('#whatsappBtn span');
+    if (whatsappSpan) whatsappSpan.innerText = t.whatsappText;
     document.getElementById('footerText').innerHTML = t.footerText;
     
-    // Update tentang content
-    document.getElementById('aboutContent').innerHTML = `
-        <p style="line-height: 1.7;">${t.aboutText1}</p>
-        <p style="margin-top: 1rem;">${t.aboutText2}</p>
-    `;
-    
-    // Update title projects & gallery
+    document.getElementById('aboutContent').innerHTML = `<p style="line-height: 1.7;">${t.aboutText1}</p><p style="margin-top: 1rem;">${t.aboutText2}</p>`;
     document.getElementById('projectsTitle').innerHTML = `${t.projectsTitle} <span id="projectCounter" class="counter-badge">${visibleProjects}/${allProjects.length}</span>`;
     document.getElementById('galleryTitle').innerHTML = `${t.galleryTitle} <span id="galleryCounter" class="counter-badge">${visibleGalleries}/${allGalleries.length}</span>`;
     
-    // Update nav links
     document.querySelectorAll('[data-key]').forEach(el => {
         const key = el.getAttribute('data-key');
         if (key && t[key]) {
@@ -81,23 +73,25 @@ function applyLanguage() {
         }
     });
     
-    // Update button texts
+    document.getElementById('langIndicator').innerText = currentLang.toUpperCase();
+    
     const t2 = translations[currentLang];
     if (visibleProjects >= allProjects.length) {
+        loadMoreProjectsBtn.disabled = true;
         document.getElementById('loadMoreProjectsText').innerText = t2.allProjectsLoaded;
     } else {
+        loadMoreProjectsBtn.disabled = false;
         document.getElementById('loadMoreProjectsText').innerText = t2.loadMoreProjects;
     }
     
     if (visibleGalleries >= allGalleries.length) {
+        loadMoreGalleryBtn.disabled = true;
         document.getElementById('loadMoreGalleryText').innerText = t2.allGalleryLoaded;
     } else {
+        loadMoreGalleryBtn.disabled = false;
         document.getElementById('loadMoreGalleryText').innerText = t2.loadMoreGallery;
     }
     
-    document.getElementById('langIndicator').innerText = currentLang.toUpperCase();
-    
-    // Re-render projects & gallery untuk update tombol "Lihat Proyek"
     renderProjects();
     renderGallery();
 }
@@ -139,11 +133,9 @@ function renderProjects() {
         projectsGrid.appendChild(card);
     }
     
-    // Update counter
     const counterSpan = document.getElementById('projectCounter');
     if (counterSpan) counterSpan.innerText = `${visibleProjects}/${allProjects.length}`;
     
-    // Update button state
     const t = translations[currentLang];
     if (visibleProjects >= allProjects.length) {
         loadMoreProjectsBtn.disabled = true;
@@ -178,11 +170,9 @@ function renderGallery() {
         galleryGrid.appendChild(card);
     }
     
-    // Update counter
     const counterSpan = document.getElementById('galleryCounter');
     if (counterSpan) counterSpan.innerText = `${visibleGalleries}/${allGalleries.length}`;
     
-    // Update button state
     const t = translations[currentLang];
     if (visibleGalleries >= allGalleries.length) {
         loadMoreGalleryBtn.disabled = true;
@@ -234,14 +224,12 @@ const sections = document.querySelectorAll('section');
 const navLinkItems = document.querySelectorAll('.nav-link');
 
 window.addEventListener('scroll', () => {
-    // Navbar background on scroll
     if (window.scrollY > 30) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
     }
     
-    // Active menu based on scroll position
     let current = '';
     const scrollPos = window.scrollY + 120;
     sections.forEach(section => {
