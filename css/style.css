@@ -1094,3 +1094,47 @@ footer {
     align-items: center;
   }
 }
+
+/* pupup */
+
+.popupbox {
+  position: fixed;
+  top: -1600px; /* disembunyikan di luar layar */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  z-index: 99999;
+  transition: top 0.5s ease-in-out;
+}
+
+.popupbox img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.close-popup {
+  position: absolute;
+  top: -32px;
+  right: 0;
+  background: #333;
+  color: #fff;
+  font-size: 22px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close-popup:hover {
+  background: #555;
+}
+
+@media (max-width:480px) {
+  .popupbox {
+    width: 95%;
+  }
+}
+
