@@ -296,3 +296,39 @@ function init() {
 }
 
 init();
+
+
+// alert durasi
+
+// setTimeout(() => {
+//   alert("HALO SEMUANYA TEMAN-TEMAN ONLINE SALAM KENAL | SELAMAT DATANG DI WEBSITE KAMI | RRI MABEST TIM");
+// }, 4000); // durasi dalam milidetik (3000 = 3 detik)
+
+document.addEventListener("DOMContentLoaded", function () {
+  // daftar popup
+  const popups = [
+    {id: "popup1", delay: 10000},   // 10 detik
+  ];
+  
+  const cooldown = 600000; // 10 menit
+
+  popups.forEach(p => {
+    let el = document.getElementById(p.id);
+    let last = localStorage.getItem("last_" + p.id);
+    let now = Date.now();
+
+    // cek apakah popup boleh tampil lagi
+    if (!last || now - last > cooldown) {
+      setTimeout(() => {
+        el.style.top = "120px"; // tampilkan popup
+        localStorage.setItem("last_" + p.id, Date.now());
+      }, p.delay);
+    }
+
+    // tombol close
+    el.querySelector(".close-popup").addEventListener("click", function (e) {
+      e.preventDefault();
+      el.style.top = "-1600px";
+    });
+  });
+});
